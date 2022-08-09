@@ -1,0 +1,70 @@
+PATH
+  remote: .
+  specs:
+    logic_pro (0.1.0)
+      activemodel
+      dry-struct
+      interactor
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activemodel (7.0.3.1)
+      activesupport (= 7.0.3.1)
+    activesupport (7.0.3.1)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      tzinfo (~> 2.0)
+    concurrent-ruby (1.1.10)
+    diff-lcs (1.5.0)
+    dry-container (0.10.1)
+      concurrent-ruby (~> 1.0)
+    dry-core (0.8.1)
+      concurrent-ruby (~> 1.0)
+    dry-inflector (0.3.0)
+    dry-logic (1.2.0)
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 0.5, >= 0.5)
+    dry-struct (1.4.0)
+      dry-core (~> 0.5, >= 0.5)
+      dry-types (~> 1.5)
+      ice_nine (~> 0.11)
+    dry-types (1.5.1)
+      concurrent-ruby (~> 1.0)
+      dry-container (~> 0.3)
+      dry-core (~> 0.5, >= 0.5)
+      dry-inflector (~> 0.1, >= 0.1.2)
+      dry-logic (~> 1.0, >= 1.0.2)
+    i18n (1.12.0)
+      concurrent-ruby (~> 1.0)
+    ice_nine (0.11.2)
+    interactor (3.1.2)
+    minitest (5.16.2)
+    rake (12.3.3)
+    rspec (3.11.0)
+      rspec-core (~> 3.11.0)
+      rspec-expectations (~> 3.11.0)
+      rspec-mocks (~> 3.11.0)
+    rspec-core (3.11.0)
+      rspec-support (~> 3.11.0)
+    rspec-expectations (3.11.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.11.0)
+    rspec-mocks (3.11.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.11.0)
+    rspec-support (3.11.0)
+    tzinfo (2.0.5)
+      concurrent-ruby (~> 1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  logic_pro!
+  rake (~> 12.0)
+  rspec (~> 3.0)
+
+BUNDLED WITH
+   2.1.2
