@@ -2,9 +2,7 @@ module LogicPro
   class Form < Dry::Struct
     ATTRIBUTES_PROPERTIES = %i[abstract as].freeze
 
-    module Types
-      include LogicPro::Types
-    end
+    Types = LogicPro::Types
 
     transform_keys(&:to_sym)
 

@@ -2,9 +2,7 @@ module LogicPro
   module InteractorForm
     extend ActiveSupport::Concern
 
-    module Types
-      include LogicPro::Types
-    end
+    Types = LogicPro::Types
 
     class_methods do
       def context_form
