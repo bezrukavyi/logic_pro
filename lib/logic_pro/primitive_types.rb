@@ -9,5 +9,6 @@ module LogicPro
     Float = Constructor(::Float, &:to_f)
     Integer = Constructor(::Integer, &:to_i)
     DateTime = Constructor(::DateTime) { |value| ::DateTime.parse(value.to_s) if value.present? }
+    InteractorType = Constructor(::Interactor) { |value| value }
   end
 end

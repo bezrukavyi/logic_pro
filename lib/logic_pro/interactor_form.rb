@@ -6,7 +6,11 @@ module LogicPro
 
     class_methods do
       def context_form
-        @context_form ||= Object.const_set('ContextForm', Class.new(LogicPro::Form))
+        @context_form ||= begin
+          new_class = Class.new(LogicPro::Form)
+
+          self.const_set('ContextForm', new_class)
+        end
       end
 
       def attribute(*args)
@@ -25,13 +29,13 @@ module LogicPro
         context_form.validates(*args)
       end
 
-      def validate(*args)
-        context_form.validate(*args)
+      def validate(*args, **options)
+        context_form.validate(*args, **options)
       end
     end
 
     def context_form
-      @context_form ||= self.class.context_form.new(context.to_h)
+      @context_form ||= ContextForm.new(context.to_h)
     end
   end
 end
