@@ -9,7 +9,7 @@ module LogicPro
         @context_form ||= begin
           new_class = Class.new(LogicPro::Form)
 
-          self.const_set('ContextForm', new_class)
+          const_set('ContextForm', new_class)
         end
       end
 
@@ -35,7 +35,7 @@ module LogicPro
     end
 
     def context_form
-      @context_form ||= ContextForm.new(context.to_h)
+      @context_form ||= self.class.context_form.new(context.to_h)
     end
   end
 end
